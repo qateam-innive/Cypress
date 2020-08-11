@@ -21,7 +21,7 @@ class HomePage {
 
                 //verify visibility of page title
                 cy.get('a[href="/index.html"]').should('be.visible')
-
+cy.screenshot()
                 //verify visibility of logos
                 cy.get('img[src="/media/seal-county.png"]').should('be.visible')
                 cy.get('li.nav-item.top-right-img.ml-2.hidden-mobile > a').should('be.visible')
