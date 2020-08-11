@@ -6,7 +6,6 @@ class DepartmentsPage
     {
         cy.get('.media-body:nth-child(2)', { timeout: 40000 }).should('be.visible')
         cy.contains('Agency').should('be.visible')
-        cy.contains('Agency').should('be.visible')
         cy.contains('Fiscal Year').should('be.visible')
         cy.contains('Board of County Commissioners').should('be.visible')
         cy.contains('2020').should('be.visible')
