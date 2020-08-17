@@ -5,26 +5,30 @@ class FactsPage
     facts()
     {
         //objects
-        /*const pageTitle = cy.get('.media-body div.cm-h3.text-secondary').should('be.visible')
-        const agency = cy.contains('Agency')
-        const boardOfCountyCommissioners = cy.contains('Board of County Commissioners').should('be.visible')
-        const cumulativeSpending = cy.contains('CUMULATIVE SPENDING-2020').should('be.visible')
-        const previousYears = cy.contains('PREVIOUS YEARS')
-        const otherPages = cy.contains('OTHER PAGES')*/
+        const pageTitle = '.media-body > div.cm-h3.text-secondary'
+        const agency = 'AGENCY'
+        const boardOfCountyCommissioners = 'Board of County Commissioners'
+        const cumulativeSpending = 'CUMULATIVE SPENDING-2020'
+        const previousYears = 'PREVIOUS YEARS'
+        const otherPages = 'OTHER PAGES'
+        const DepartmentsPage = 'a[href="departments.html"]'
+        
 
         
         //actions
         cy.wait(7000)
-      //  cy.get('.media-body div.cm-h3.text-secondary').should('be.visible')
-        cy.contains('Agency', { timeout: 40000 }).should('be.visible')
-        cy.contains('Board of County Commissioners').should('be.visible')
-        cy.contains('CUMULATIVE SPENDING-2020').should('be.visible')
-        cy.contains('PREVIOUS YEARS').should('be.visible')
-        cy.contains('OTHER PAGES').should('be.visible')
-        cy.get('ul.list-unstyled.cm-widget1.p-3.mb-0 > li:nth-child(1) > p:nth-child(1)').should('be.visible')
-        cy.get('ul.list-unstyled.cm-widget1.p-3.mb-0 > li:nth-child(2) > p:nth-child(1)').should('be.visible')
+        cy.get(pageTitle, { timeout: 40000 }).should('be.visible')
+        cy.contains(agency, { timeout: 40000 }).should('be.visible')
+        cy.contains(boardOfCountyCommissioners, { timeout: 40000 }).should('be.visible')
+        cy.contains(cumulativeSpending, { timeout: 40000 }).should('be.visible')
+        cy.contains(previousYears, { timeout: 40000 }).should('be.visible')
+        cy.contains(otherPages, { timeout: 40000 }).should('be.visible')
+        cy.get(DepartmentsPage, { timeout: 40000 }).should('be.visible')
+        cy.get(DepartmentsPage).click()
 
 }
+
+
 }
 
 export default FactsPage

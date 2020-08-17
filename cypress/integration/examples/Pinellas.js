@@ -1,9 +1,19 @@
 import HomePage from '../pinellasPages/HomePage'
 import FactsPage from '../pinellasPages/FactsPage'
+import Common from '../pinellasPages/Common/VerifyPageElements'
 import DepartmentsPage from '../pinellasPages/DepartmentsPage'
 import VendorsPage from '../pinellasPages/VendorsPage'
 import CategoriesPage from '../pinellasPages/CategoriesPage'
 import PayrollPage from '../pinellasPages/PayrollPage'
+
+/*before(function(){
+cy.fixture('pinellas').then(function(data){
+    this.data=data
+
+
+})
+})*/
+
 
 describe('PinellasSuite', function () {
 
@@ -22,21 +32,25 @@ describe('PinellasSuite', function () {
     })
 
     it('departments', function () {
-        const dp = new DepartmentsPage()
-        dp.departments()
+        //const dp = new DepartmentsPage()
+        const cm = new Common()
+        //dp.department()
+        cm.common()
+       // cy.get('input[placeholder ="Search"]').type(data)
+
     })
 
-    it('vendors', function () {
+    it.skip('vendors', function () {
         const vp = new VendorsPage()
         vp.vendors()
     })
 
-    it('categories', function () {
+    it.skip('categories', function () {
         const cp = new CategoriesPage()
         cp.categories()
     })
     
-    it('payroll', function () {
+    it.skip('payroll', function () {
         const pp = new PayrollPage()
         pp.payroll()
     })    
